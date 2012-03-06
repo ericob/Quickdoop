@@ -1,0 +1,25 @@
+Quickdoop
+
+As of now, this is a realtively simple script that automates the
+steps necessary to set up a single-node hadoop cluster.
+
+These steps were taken almost completely from Michael Noll's tutorial, 
+http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/
+Figuring out how to automate things like passwd and adduser was all me
+- with some frustratingly bad help from google.
+
+
+To use this, download all the files into a folder on a desired machine
+(virtual or otherwise). Open up a terminal and run:
+    sudo ./install.sh
+
+A new user "hduser" will be created with the password "hadoop" that
+has the ability to use hadoop. Run
+    su hduser
+To test this out without explicitly logging into the account.
+
+WARNING: Please only test this out in a virtual machine or a new
+installation you don't care much about. I've tested it successfully on
+new installations of Ubuntu 11.10 and Lubuntu 12.04 beta (running on
+virtual machines), though I have have no idea what it'll do to other
+systems. At this point it's not very robust, so use at your own risk.
